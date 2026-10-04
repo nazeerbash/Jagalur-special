@@ -27,6 +27,9 @@ img { display: block; max-width: 100%; }
 .site-nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 48px); }
 .site-nav > a:not(.nav-cta) { font-size: 13px; font-weight: 600; transition: color 160ms ease; }
 .site-nav > a:not(.nav-cta):hover { color: var(--red); }
+.language-control { display: inline-flex; }
+.language-control select { min-height: 38px; padding: 0 28px 0 10px; border: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font: 600 11px var(--body); cursor: pointer; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .nav-cta { display: inline-flex; align-items: center; gap: 19px; padding: 13px 18px; background: var(--ink); color: var(--white); font-size: 12px; font-weight: 600; transition: background 160ms ease; }
 .nav-cta:hover, .button-dark:hover { background: #28513d; }
 .nav-cta span, .button span { font-size: 16px; line-height: 1; }
@@ -109,6 +112,10 @@ img { display: block; max-width: 100%; }
 .footer-contact a { font-size: 16px; font-weight: 600; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); }
 
+html[lang="kn"] body { font-family: "Noto Sans Kannada", var(--body), sans-serif; }
+html[lang="kn"] h1, html[lang="kn"] h2, html[lang="kn"] h3 { font-family: "Noto Sans Kannada", var(--body), sans-serif; line-height: 1.35; }
+html[lang="kn"] .language-control select { font-family: "Noto Sans Kannada", var(--body), sans-serif; }
+
 @keyframes content-arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes image-arrive { from { transform: scale(1.025); } to { transform: scale(1); } }
 @keyframes item-arrive { from { opacity: .4; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
@@ -136,6 +143,8 @@ img { display: block; max-width: 100%; }
   .site-nav.is-open { display: grid; gap: 0; }
   .site-nav > a:not(.nav-cta) { padding: 14px 0; border-bottom: 1px solid var(--line); }
   .site-nav .nav-cta { justify-content: space-between; margin-top: 14px; }
+  .language-control { padding-top: 14px; }
+  .language-control select { width: 100%; }
   .hero { min-height: 650px; height: calc(100svh - 72px); max-height: 760px; padding: 70px 25px 92px; align-items: center; }
   .hero-image { object-position: 58% center; }
   .hero-shade { background: rgba(10, 27, 20, .65); }
